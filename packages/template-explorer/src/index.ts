@@ -16,6 +16,7 @@ declare global {
     monaco: typeof m
     _deps: any
     init: () => void
+    __adobe_cep__: any
   }
 }
 

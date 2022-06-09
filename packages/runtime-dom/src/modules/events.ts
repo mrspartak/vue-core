@@ -1,4 +1,4 @@
-import { hyphenate, isArray } from '@vue/shared'
+import { hyphenate, isArray, isObject } from '@vue/shared'
 import {
   ComponentInternalInstance,
   callWithAsyncErrorHandling
@@ -9,6 +9,12 @@ interface Invoker extends EventListener {
   value: EventValue
   attached: number
 }
+
+export const inBrowser = typeof window !== 'undefined'
+export const isCEP = inBrowser && isObject(window.__adobe_cep__)
+export const isMAC =
+  inBrowser && /mac/.test(window.navigator.platform.toLowerCase())
+
 
 type EventValue = Function | Function[]
 
@@ -30,7 +36,7 @@ const [_getNow, skipTimestampCheck] = /*#__PURE__*/ (() => {
     // #3485: Firefox <= 53 has incorrect Event.timeStamp implementation
     // and does not fire microtasks in between event propagation, so safe to exclude.
     const ffMatch = navigator.userAgent.match(/firefox\/(\d+)/i)
-    skipTimestampCheck = !!(ffMatch && Number(ffMatch[1]) <= 53)
+    skipTimestampCheck = !!(ffMatch && Number(ffMatch[1]) <= 53) || (isCEP && isMAC)
   }
   return [_getNow, skipTimestampCheck]
 })()
