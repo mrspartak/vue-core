@@ -2,6 +2,10 @@
 
 
 
+## [3.2.35](https://github.com/mrspartak/vue-core/compare/v3.2.36...v3.2.35) (2022-06-14)
+
+
+
 ## [3.2.36](https://github.com/mrspartak/vue-core/compare/v3.2.37...v3.2.36) (2022-06-14)
 
 
