@@ -175,8 +175,8 @@ function updatePackage(pkgRoot, version) {
   const pkgPath = path.resolve(pkgRoot, 'package.json')
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))
   pkg.version = version
-  updateDeps(pkg, 'dependencies', version)
-  updateDeps(pkg, 'peerDependencies', version)
+  //updateDeps(pkg, 'dependencies', version)
+  //updateDeps(pkg, 'peerDependencies', version)
   fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + '\n')
 }
 
