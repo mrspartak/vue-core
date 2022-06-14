@@ -33,6 +33,7 @@ const buildTypes = args.t || args.types || isRelease
 const buildAllMatching = args.all || args.a
 const commit = execa.sync('git', ['rev-parse', 'HEAD']).stdout.slice(0, 7)
 
+console.log('build', { args })
 run()
 
 async function run() {

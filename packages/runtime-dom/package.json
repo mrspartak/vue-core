@@ -1,7 +1,7 @@
 {
-  "name": "@vue/runtime-dom",
-  "version": "3.2.38",
-  "description": "@vue/runtime-dom",
+  "name": "@storyteq/runtime-dom",
+  "version": "3.2.43",
+  "description": "@storyteq/runtime-dom",
   "main": "index.js",
   "module": "dist/runtime-dom.esm-bundler.js",
   "types": "dist/runtime-dom.d.ts",

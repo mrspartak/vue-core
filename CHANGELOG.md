@@ -1,3 +1,30 @@
+## [3.2.44](https://github.com/mrspartak/vue-core/compare/v3.2.37...v3.2.44) (2022-06-14)
+
+
+### Performance Improvements
+
+* **ssr:** improve isComment check ([#6078](https://github.com/mrspartak/vue-core/issues/6078)) ([25f7a16](https://github.com/mrspartak/vue-core/commit/25f7a16a6eccbfa8d857977dcf1f23fb36b830b5))
+
+
+
+## [3.2.39](https://github.com/mrspartak/vue-core/compare/v3.2.37...v3.2.39) (2022-06-14)
+
+
+### Performance Improvements
+
+* **ssr:** improve isComment check ([#6078](https://github.com/mrspartak/vue-core/issues/6078)) ([25f7a16](https://github.com/mrspartak/vue-core/commit/25f7a16a6eccbfa8d857977dcf1f23fb36b830b5))
+
+
+
+## [3.2.39](https://github.com/mrspartak/vue-core/compare/v3.2.37...v3.2.39) (2022-06-14)
+
+
+### Performance Improvements
+
+* **ssr:** improve isComment check ([#6078](https://github.com/mrspartak/vue-core/issues/6078)) ([25f7a16](https://github.com/mrspartak/vue-core/commit/25f7a16a6eccbfa8d857977dcf1f23fb36b830b5))
+
+
+
 ## [3.2.38](https://github.com/mrspartak/vue-core/compare/v3.2.37...v3.2.38) (2022-06-14)
 
 

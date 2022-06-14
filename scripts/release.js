@@ -13,11 +13,31 @@ const preId =
 const isDryRun = args.dry
 const skipTests = args.skipTests
 const skipBuild = args.skipBuild
-const packages = fs
+/* const packages = fs
   .readdirSync(path.resolve(__dirname, '../packages'))
-  .filter(p => !p.endsWith('.ts') && !p.startsWith('.'))
+  .filter(p => !p.endsWith('.ts') && !p.startsWith('.')) */
 
-const skippedPackages = []
+const packages = ['runtime-dom']
+
+const skippedPackages = [
+  'compiler-core',
+  'compiler-dom',
+  'compiler-sfc',
+  'compiler-ssr',
+  'reactivity',
+  'reactivity-transform',
+  'runtime-core',
+  'runtime-test',
+  'server-renderer',
+  'sfc-playground',
+  'shared',
+  'size-check',
+  'template-explorer',
+  'vue',
+  'vue-compat'
+]
+
+console.log('release', { args, packages, skippedPackages })
 
 const versionIncrements = [
   'patch',
@@ -92,7 +112,7 @@ async function main() {
   // build all packages with types
   step('\nBuilding all packages...')
   if (!skipBuild && !isDryRun) {
-    await run('pnpm', ['run', 'build', '--release'])
+    await run('pnpm', ['run', 'build', ...packages, '--release'])
     // test generated dts files
     step('\nVerifying type declarations...')
     await run('pnpm', ['run', 'test-dts-only'])
