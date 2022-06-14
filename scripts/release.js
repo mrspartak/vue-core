@@ -105,8 +105,8 @@ async function main() {
   }
 
   // update all package versions and inter-dependencies
-  step('\nUpdating cross dependencies...')
-  updateVersions(targetVersion)
+  //step('\nUpdating cross dependencies...')
+  //updateVersions(targetVersion)
 
   // build all packages with types
   step('\nBuilding all packages...')
@@ -248,6 +248,6 @@ async function publishPackage(pkgName, version, runIfNotDry) {
 }
 
 main().catch(err => {
-  updateVersions(currentVersion)
+  //updateVersions(currentVersion)
   console.error(err)
 })
