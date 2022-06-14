@@ -17,7 +17,7 @@ const skipBuild = args.skipBuild
   .readdirSync(path.resolve(__dirname, '../packages'))
   .filter(p => !p.endsWith('.ts') && !p.startsWith('.')) */
 
-const packages = ['runtime-dom']
+const packages = ['runtime-dom', 'vue']
 
 const skippedPackages = [
   'compiler-core',
@@ -33,7 +33,6 @@ const skippedPackages = [
   'shared',
   'size-check',
   'template-explorer',
-  'vue',
   'vue-compat'
 ]
 
