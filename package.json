@@ -1,6 +1,6 @@
 {
-  "name": "vue",
-  "private": true,
+  "name": "@storyteq/vue",
+  "private": false,
   "version": "3.2.37",
   "packageManager": "pnpm@7.1.0",
   "scripts": {

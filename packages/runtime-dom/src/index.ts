@@ -24,6 +24,12 @@ import {
   NOOP
 } from '@vue/shared'
 
+declare global {
+  interface Window {
+    __adobe_cep__: any
+  }
+}
+
 declare module '@vue/reactivity' {
   export interface RefUnwrapBailTypes {
     // Note: if updating this, also update `types/refBail.d.ts`.
